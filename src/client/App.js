@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './app.css';
-import ReactImage from './react.png';
+import Header from './Header'
+import Main from './Main'
 
-export default class App extends Component {
+
+  class App extends Component {
   state = { username: null };
 
   componentDidMount() {
@@ -15,9 +16,10 @@ export default class App extends Component {
     const { username } = this.state;
     return (
       <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
+        <Header/>
+        <Main/>
       </div>
     );
   }
 }
+export default App;
