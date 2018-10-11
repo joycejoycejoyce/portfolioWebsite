@@ -32,7 +32,7 @@ const themes = {
 
 const Div = styled.div`
   color: white;
-  text-indent: 30px;
+  
 `;
   class App extends Component {
     constructor() {

@@ -1,24 +1,40 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const Div = styled.div`
-padding: 1% 17% 3% 17%;
-flex: 1;
-font-family: 'Open Sans', sans-serif;;
-`;
 
 const Intro = styled.div`
 padding: 1% 17% 3% 17%;
 `;
 const Para = styled.p`
+    text-indent: 30px;
+    font-size: 1.1rem;
+    word-spacing: 4px;
+    line-height: 26px;
 `;
+/* waving effect */
+const handWave = keyframes`
+from {
+    transform: rotate(-60deg);
+}
+to {
+    transform: rotate(0deg);
+}
+
+`;
+const Waving = styled.span`
+    animation: ${handWave} 1.4s ease-in 1s alternate backwards;
+    display: inline-block;
+    animation-timing-function: ease-in-out;
+`;
+
+
 class Home extends Component{
     render(){
         return(
             <div>
                 <Intro>
                    <Para>
-                       Hi, I am Joyce Zhou. I am a senior student majoring CIT.
+                       Hi,<Waving role="img" aria-label="waving-hand">🙋</Waving> I am Joyce Zhou. I am a senior student majoring CIT.
                        I study at Purdue University which located at West Lafayette.
                        Studying in here is a very fun experience. I wasn't a coding major,
                        in fact, I didn't thought about do computer related jobs in the future 
